@@ -6,6 +6,8 @@
     --pr-cl: #fe2c55;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --back: #000;
+    --text-cl: #333;
 
 }
 
@@ -24,5 +26,19 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    color: var(--text-cl);
 
+
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-cl);
+    text-decoration: none;
 }
