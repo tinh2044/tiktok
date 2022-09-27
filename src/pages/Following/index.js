@@ -1,5 +1,18 @@
+import classNames from 'classnames/bind';
+import VideoItem from '~/layouts/components/VideoItem';
+import styles from './Following.module.scss';
+import { SuggestVideo as dataVideo } from '~/data/SuggestVideo';
+
+const cx = classNames.bind(styles);
+
 function Following() {
-    return <h1>following</h1>;
+    return (
+        <div className={cx('following')}>
+            {dataVideo.map((data, index) => {
+                return <VideoItem key={index} data={data} />;
+            })}
+        </div>
+    );
 }
 
 export default Following;

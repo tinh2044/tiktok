@@ -1,31 +1,38 @@
+import config from '~/config';
+
 import HomePage from '~/pages/Home';
 import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
-import { HeaderOnly } from '~/components/Layout';
+import { HeaderOnly } from '~/layouts';
+import Live from '~/pages/Live';
 const publicRoutes = [
     {
-        path: '/',
+        path: config.routes.home,
         component: HomePage,
     },
     {
-        path: '/following',
+        path: config.routes.following,
         component: Following,
     },
     {
-        path: '/profile',
+        path: config.routes.profile,
         component: Profile,
     },
     {
-        path: '/upload',
+        path: config.routes.upload,
         component: Upload,
         layout: HeaderOnly,
     },
     {
-        path: '/search',
+        path: config.routes.search,
         component: Search,
         layout: null,
+    },
+    {
+        path: config.routes.live,
+        component: Live,
     },
 ];
 const privateRoute = [];
