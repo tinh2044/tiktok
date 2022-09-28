@@ -1,7 +1,9 @@
 import classNames from 'classnames/bind';
 import { Fragment } from 'react';
 import { useForm } from '~/hooks';
+import FormLoginPhone from '../FormLoginPhone';
 import FormSignUp from '../FormSignUp';
+import FormLoginUser from '../FromLoginUser';
 import {
     FacebookIcon,
     GoogleIcon,
@@ -21,10 +23,14 @@ const listLogin = [
     {
         icon: <QrCodeIcon />,
         title: 'Use QR code',
+        onClick: (data = () => {}) => data,
+        component: <FormLoginUser />,
     },
     {
         icon: <UserIcon />,
         title: 'Use phone / email / username',
+        onClick: (data = () => {}) => data,
+        component: <FormLoginPhone />,
     },
     {
         icon: <FacebookIcon />,

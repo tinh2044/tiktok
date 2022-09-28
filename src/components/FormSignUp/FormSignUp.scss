@@ -61,6 +61,10 @@
 
 .change {
     color: var(--pr-cl);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 // Item Login

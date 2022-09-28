@@ -1,10 +1,10 @@
 import { createContext, useState } from 'react';
 import FormLogin from '~/components/FormLogin';
-// import FormSignUp from '~/components/FormSignUp';
+import FormLoginPhone from '~/components/FormLoginPhone';
 import Modal from '~/components/Modal';
 export const FormCategory = createContext();
-function FromContext({ children }) {
-    const [Form, setForm] = useState(<FormLogin />);
+function FromContext() {
+    const [Form, setForm] = useState(<FormLoginPhone />);
     const value = {
         Form,
         setForm: (form) => {

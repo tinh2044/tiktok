@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { useForm } from '~/hooks';
 
-import styles from './ModalLogin.scss';
+import styles from './Modal.module.scss';
 const cx = classNames.bind(styles);
 function Modal() {
     const { Form } = useForm();
