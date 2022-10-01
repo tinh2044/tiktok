@@ -38,6 +38,7 @@ function Search() {
     const handleHideResult = () => {
         setShowResult(false);
     };
+
     const handleSubmit = (e) => {
         e.preventDefault();
     };
