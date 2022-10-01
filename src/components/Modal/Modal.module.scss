@@ -20,6 +20,19 @@
     align-items: center;
     position: relative;
     border-radius: 8px;
+    animation: Modal ease-in 0.2s;
+}
+
+@keyframes Modal {
+    from {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 

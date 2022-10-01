@@ -15,7 +15,7 @@ function DefaultLayout({ children }) {
                 <Sidebar />
                 <div className={cx('content')}>
                     <PlayContext>
-                        <VolContext> {children}</VolContext>
+                        <VolContext>{children}</VolContext>
                     </PlayContext>
                 </div>
             </div>

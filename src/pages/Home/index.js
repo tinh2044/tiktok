@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import VideoItem from '~/layouts/components/VideoItem';
+import VideoItem from '~/components/VideoItem';
 import styles from './Home.module.scss';
 import { SuggestVideo as dataVideo } from '~/data/SuggestVideo';
 const cx = classNames.bind(styles);

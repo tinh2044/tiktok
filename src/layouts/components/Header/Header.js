@@ -24,6 +24,7 @@ import Menu from '~/components/Popper/Menu';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/icons';
 import Image from '~/components/image';
 import Search from '../Search';
+import { Modal } from '~/Context/ModalContext';
 import { Login } from '~/Context/LoginContext';
 const cx = classNames.bind(styles);
 
@@ -55,35 +56,36 @@ const MENU_ITEMS = [
         title: 'Keyboard shortcuts',
     },
 ];
+const userMenu = [
+    {
+        icon: <FontAwesomeIcon icon={faUser} />,
+        title: 'View profile',
+        to: '/@hoangmy',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGear} />,
+        title: 'Settings',
+        to: '/settings',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCoins} />,
+        title: 'Get Coins',
+        to: '/coin',
+    },
+    ...MENU_ITEMS,
+    {
+        icon: <FontAwesomeIcon icon={faSignOut} />,
+        title: 'Log out',
+        onChange: () => {
+            console.log('Log out');
+        },
+        separate: true,
+    },
+];
 
 function Header() {
-    const { isLogin, setIsLogin } = useContext(Login);
-    const userMenu = [
-        {
-            icon: <FontAwesomeIcon icon={faUser} />,
-            title: 'View profile',
-            to: '/@hoangmy',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faGear} />,
-            title: 'Settings',
-            to: '/settings',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faCoins} />,
-            title: 'Get Coins',
-            to: '/coin',
-        },
-        ...MENU_ITEMS,
-        {
-            icon: <FontAwesomeIcon icon={faSignOut} />,
-            title: 'Log out',
-            onChange: () => {
-                console.log('Log out');
-            },
-            separate: true,
-        },
-    ];
+    const { show } = useContext(Modal);
+    const { isLogin } = useContext(Login);
 
     return (
         <header className={cx('wrapper')}>
@@ -115,15 +117,19 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text>Upload</Button>
-                            <Button primary>Log in</Button>
+                            <Button onClick={show} text>
+                                Upload
+                            </Button>
+                            <Button onClick={show} primary>
+                                Log in
+                            </Button>
                         </>
                     )}
                     <Menu items={isLogin ? userMenu : MENU_ITEMS} isLogin={isLogin}>
                         {isLogin ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/6e3ad53c4958a754723545520a375801~c5_100x100.jpeg?x-expires=1663830000&x-signature=rCItie3KtqhB47R7D0HCxZ%2BwOnw%3D"
+                                src="https://img4.thuthuatphanmem.vn/uploads/2020/05/07/anh-cute-dang-yeu_093403118.jpg"
                                 alt="Nguyen Chi Tinh"
                             />
                         ) : (

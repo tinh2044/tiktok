@@ -1,13 +1,17 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/layouts';
+
 import FromContext from './Context/FormContext';
+import { Modal } from './Context/ModalContext';
 function App() {
+    const { showModal } = useContext(Modal);
+
     return (
         <Router>
             <div className="App">
-                <FromContext />
+                {showModal && <FromContext />}
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = DefaultLayout;

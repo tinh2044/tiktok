@@ -8,6 +8,7 @@ import {
     UserGroupActiveIcon,
     UserGroupIcon,
 } from '~/components/icons';
+
 import { Login } from '~/Context/LoginContext';
 import config from '~/config';
 import Menu from './Menu';
@@ -18,10 +19,13 @@ import { SuggestHashtag } from '~/data/SuggestHashtag';
 import Hashtag from '~/components/Hashtag';
 import { dataFooter } from '~/data/Footer';
 import Button from '~/layouts/Button';
+import { Modal } from '~/Context/ModalContext';
 const cx = classNames.bind(styles);
 
 function Sidebar() {
+    const { show } = useContext(Modal);
     const { isLogin } = useContext(Login);
+
     return (
         <aside className={cx('wrapper')}>
             <Menu>
@@ -37,7 +41,7 @@ function Sidebar() {
             {!isLogin && (
                 <div className={cx('login')}>
                     <p className={cx('header')}>Đăng nhập để follow các tác giả, thích video và xem bình luận.</p>
-                    <Button className={cx('login-btn')} outline large>
+                    <Button className={cx('login-btn')} outline large onClick={show}>
                         LOG IN
                     </Button>
                 </div>

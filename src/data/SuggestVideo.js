@@ -20,6 +20,7 @@ export const SuggestVideo = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        id: 1,
     },
     {
         video: video_2,
@@ -35,6 +36,7 @@ export const SuggestVideo = [
         tick: false,
         follow: '344k',
         totalLike: '2.3M',
+        id: 2,
     },
     {
         video: video_3,
@@ -65,6 +67,7 @@ export const SuggestVideo = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        id: 3,
     },
     {
         video: video_4,
@@ -80,6 +83,7 @@ export const SuggestVideo = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        id: 4,
     },
     {
         video: video_5,
@@ -95,6 +99,7 @@ export const SuggestVideo = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        id: 5,
     },
     {
         video: video_6,
@@ -110,6 +115,7 @@ export const SuggestVideo = [
         tick: false,
         follow: '344k',
         totalLike: '2.3M',
+        id: 6,
     },
     {
         video: video_7,
@@ -125,5 +131,6 @@ export const SuggestVideo = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        id: 7,
     },
 ];
