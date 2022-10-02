@@ -1,10 +1,10 @@
-import video_1 from '~/Video/item_1.mp4';
-import video_2 from '~/Video/item_2.mp4';
-import video_3 from '~/Video/item_3.mp4';
-import video_4 from '~/Video/item_4.mp4';
-import video_5 from '~/Video/item_5.mp4';
-import video_6 from '~/Video/item_6.mp4';
-import video_7 from '~/Video/item_7.mp4';
+import video_1 from '~/assets/Video/VideoHome/item_1.mp4';
+import video_2 from '~/assets/Video/VideoHome/item_2.mp4';
+import video_3 from '~/assets/Video/VideoHome/item_3.mp4';
+import video_4 from '~/assets/Video/VideoHome/item_4.mp4';
+import video_5 from '~/assets/Video/VideoHome/item_5.mp4';
+import video_6 from '~/assets/Video/VideoHome/item_6.mp4';
+import video_7 from '~/assets/Video/VideoHome/item_7.mp4';
 export const SuggestVideo = [
     {
         video: video_1,

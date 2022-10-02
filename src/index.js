@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './components/GlobalStyle';
 import ModalContext from './Context/ModalContext';
 import LoginContext from './Context/LoginContext';
+import ModalDownloadContext from './Context/ModalDownloadContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -12,7 +13,9 @@ root.render(
         <GlobalStyle>
             <ModalContext>
                 <LoginContext>
-                    <App />
+                    <ModalDownloadContext>
+                        <App />
+                    </ModalDownloadContext>
                 </LoginContext>
             </ModalContext>
         </GlobalStyle>

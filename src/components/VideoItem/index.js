@@ -21,7 +21,7 @@ import { useState, useRef, useContext, useMemo } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
-import Image from '~/components/image';
+import Image from '~/components/Image';
 import Button from '~/layouts/Button';
 import Hashtag from '../Hashtag';
 import styles from './VideoItem.module.scss';
@@ -30,6 +30,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { Vol } from '~/Context/VolContext';
 import { Play } from '~/Context/PlayContext';
 import Share from '~/components/Share';
+import { Modal } from '~/Context/ModalContext';
+import { Login } from '~/Context/LoginContext';
 const cx = classNames.bind(styles);
 const ListShare = [
     {
@@ -84,6 +86,8 @@ function VideoItem({ data }) {
     const { volume, setVolume } = useContext(Vol);
     const videoRef = useRef(null);
     const [isPlay, setIstPlay] = useState(false);
+    const { show } = useContext(Modal);
+    const { isLogin } = useContext(Login);
     useMemo(() => {
         if (playVideo && videoRef.current !== null) {
             if (playVideo === data.id) {
@@ -169,7 +173,9 @@ function VideoItem({ data }) {
                     </div>
                 </div>
                 <div>
-                    <Button outline>Follow</Button>
+                    <Button outline onClick={isLogin ? () => {} : show}>
+                        Follow
+                    </Button>
                 </div>
             </header>
             <div className={cx('main')}>

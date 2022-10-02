@@ -1,3 +1,14 @@
+import video_1 from '~/assets/Video/VideoFollowing/item_1.mp4';
+import video_2 from '~/assets/Video/VideoFollowing/item_2.mp4';
+import video_3 from '~/assets/Video/VideoFollowing/item_3.mp4';
+import video_4 from '~/assets/Video/VideoFollowing/item_4.mp4';
+import video_5 from '~/assets/Video/VideoFollowing/item_5.mp4';
+import video_6 from '~/assets/Video/VideoFollowing/item_6.mp4';
+import video_7 from '~/assets/Video/VideoFollowing/item_7.mp4';
+import video_8 from '~/assets/Video/VideoFollowing/item_8.mp4';
+import video_9 from '~/assets/Video/VideoFollowing/item_9.mp4';
+import video_10 from '~/assets/Video/VideoFollowing/item_10.mp4';
+
 export const SuggestAccount = [
     {
         name: 'Nguyễn Chí Tình',
@@ -6,6 +17,7 @@ export const SuggestAccount = [
         tick: true,
         follow: '344k',
         totalLike: '2.3M',
+        video: video_1,
     },
     {
         name: 'Iron Man',
@@ -14,6 +26,7 @@ export const SuggestAccount = [
         tick: false,
         follow: '21k',
         totalLike: '34k',
+        video: video_2,
     },
     {
         name: 'Anh Bảo Vệ ✅',
@@ -22,6 +35,7 @@ export const SuggestAccount = [
         tick: false,
         follow: '2k',
         totalLike: '7.4k',
+        video: video_3,
     },
     {
         name: 'ASMR MUKBANG',
@@ -30,6 +44,7 @@ export const SuggestAccount = [
         tick: false,
         follow: '5k',
         totalLike: '9k',
+        video: video_4,
     },
     {
         name: 'vanquocty2002',
@@ -38,6 +53,7 @@ export const SuggestAccount = [
         tick: true,
         follow: '1M',
         totalLike: '2.4m',
+        video: video_5,
     },
     {
         name: 'Cá Cảnh Hoàng Anh',
@@ -46,6 +62,7 @@ export const SuggestAccount = [
         tick: false,
         follow: '74.4k',
         totalLike: '2.4m',
+        video: video_6,
     },
     {
         name: 'Kiệt Ắk Wỷ',
@@ -54,6 +71,7 @@ export const SuggestAccount = [
         tick: true,
         follow: '3.4m',
         totalLike: '1006.6m',
+        video: video_7,
     },
     {
         name: 'tượng diệt vinacon 🗿',
@@ -62,6 +80,7 @@ export const SuggestAccount = [
         tick: true,
         follow: '100k',
         totalLike: '394k',
+        video: video_8,
     },
     {
         name: 'Duy Thẩm',
@@ -70,6 +89,7 @@ export const SuggestAccount = [
         tick: true,
         follow: '4.7m',
         totalLike: '167.8m',
+        video: video_9,
     },
     {
         name: 'Phuoc Hai ✈️',
@@ -78,5 +98,6 @@ export const SuggestAccount = [
         tick: false,
         follow: '43k',
         totalLike: '126k',
+        video: video_10,
     },
 ];

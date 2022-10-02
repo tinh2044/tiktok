@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-
 import className from 'classnames/bind';
+
 import styles from './DefaultLayout.module.scss';
 import Header from '~/layouts/components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
 import PlayContext from '~/Context/PlayContext';
 import VolContext from '~/Context/VolContext';
+import DownloadApp from '../../components/DownloadApp';
 const cx = className.bind(styles);
 function DefaultLayout({ children }) {
     return (
@@ -19,6 +20,7 @@ function DefaultLayout({ children }) {
                     </PlayContext>
                 </div>
             </div>
+            <DownloadApp />
         </div>
     );
 }

@@ -22,7 +22,7 @@ import images from '~/assets/images';
 import Button from '~/layouts/Button';
 import Menu from '~/components/Popper/Menu';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/icons';
-import Image from '~/components/image';
+import Image from '~/components/Image';
 import Search from '../Search';
 import { Modal } from '~/Context/ModalContext';
 import { Login } from '~/Context/LoginContext';

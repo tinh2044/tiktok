@@ -16,7 +16,7 @@
 
 .desc {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     max-width: 80%;
 }
 
@@ -91,7 +91,7 @@
 // Video
 .main {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 
 }
 

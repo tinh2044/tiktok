@@ -5,13 +5,17 @@ import { DefaultLayout } from '~/layouts';
 
 import FromContext from './Context/FormContext';
 import { Modal } from './Context/ModalContext';
+import { ModalDownload } from './Context/ModalDownloadContext';
+import { FormDownload } from './components/Form';
 function App() {
     const { showModal } = useContext(Modal);
+    const { showModalDownload } = useContext(ModalDownload);
 
     return (
         <Router>
             <div className="App">
                 {showModal && <FromContext />}
+                {showModalDownload && <FormDownload />}
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = DefaultLayout;
