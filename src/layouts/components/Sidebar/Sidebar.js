@@ -17,17 +17,18 @@ import styles from './Sidebar.module.scss';
 import SuggestAccount from '~/components/SuggestedAccount';
 import { SuggestHashtag } from '~/data/SuggestHashtag';
 import Hashtag from '~/components/Hashtag';
-import { dataFooter } from '~/data/Footer';
 import Button from '~/layouts/Button';
 import { Modal } from '~/Context/ModalContext';
+import Footer from '../Footer';
+import SuggestLive from '~/components/SuggestLive/Index';
 const cx = classNames.bind(styles);
 
 function Sidebar() {
     const { show } = useContext(Modal);
     const { isLogin } = useContext(Login);
-
+    let styleLive = window.location.pathname.includes('/live');
     return (
-        <aside className={cx('wrapper')}>
+        <aside className={cx('wrapper')} style={{ width: styleLive ? '232px' : '356px' }}>
             <Menu>
                 <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
                 <MenuItem
@@ -46,7 +47,7 @@ function Sidebar() {
                     </Button>
                 </div>
             )}
-            <SuggestAccount label="Suggest Account" />
+            {!styleLive ? <SuggestAccount label="Suggest Account" /> : <SuggestLive />}
 
             <div className={cx('hashtag')}>
                 <p className={cx('title')}>Khám phá</p>
@@ -54,22 +55,7 @@ function Sidebar() {
                     <Hashtag key={index} data={item} className={cx('item')} />
                 ))}
             </div>
-            <footer className={cx('footer')}>
-                {dataFooter.map((item, index) => {
-                    return (
-                        <div key={index} className={cx('footer-item')}>
-                            {item.map((item, index) => {
-                                return (
-                                    <a className={cx('link')} href={item.link} target="_bank" key={index}>
-                                        {item.title}
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    );
-                })}
-                <p>@2022 TikTok</p>
-            </footer>
+            <Footer />
         </aside>
     );
 }

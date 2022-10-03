@@ -7,7 +7,7 @@ import 'tippy.js/dist/tippy.css'; //
 import { Wrapper as PopperWrapper } from '../Popper';
 import classNames from 'classnames/bind';
 import styles from './SuggestAccount.module.scss';
-import AccountPreview from './AccuontPreview';
+import AccountPreview from '../AccuontPreview';
 import Image from '../Image';
 import { Link } from 'react-router-dom';
 

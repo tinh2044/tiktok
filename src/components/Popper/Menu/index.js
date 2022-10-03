@@ -2,15 +2,21 @@ import PropTypes from 'prop-types';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
+import { useContext, useEffect, useState } from 'react';
 import styles from './Menu.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItem from './MenuItem';
 import Header from './HearMenu';
-import { useState } from 'react';
+import { Login } from '~/Context/LoginContext';
 
 const cx = classNames.bind(styles);
-function Menu({ isLogin, children, items = [], onChange = () => {}, ...passProp }) {
+function Menu({ children, items = [], onChange = () => {}, ...passProp }) {
+    const { isLogin, logout } = useContext(Login);
     const [history, setHistory] = useState([{ data: items }]);
+    useEffect(() => {
+        setHistory([{ data: items }]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isLogin]);
     const current = history[history.length - 1];
     const renderItems = () => {
         return current.data.map((item, index) => {
@@ -23,7 +29,9 @@ function Menu({ isLogin, children, items = [], onChange = () => {}, ...passProp 
                         if (isParent) {
                             setHistory((prev) => [...prev, item.children]);
                         } else {
-                            console.log(items);
+                            if (typeof item.onChange === 'function') {
+                                item.onChange(logout);
+                            }
                         }
                     }}
                 />

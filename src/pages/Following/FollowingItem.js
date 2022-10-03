@@ -5,12 +5,14 @@ import styles from './Following.module.scss';
 import Image from '~/components/Image';
 import Button from '~/layouts/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useContext, useRef } from 'react';
 import { Vol } from '~/Context/VolContext';
+import { Modal } from '~/Context/ModalContext';
 
 const cx = classNames.bind(styles);
 function FollowingItem({ data }) {
+    const { show } = useContext(Modal);
     const { volume } = useContext(Vol);
     const videoRef = useRef();
     return (
@@ -43,7 +45,7 @@ function FollowingItem({ data }) {
                             </span>
                         )}
                     </h6>
-                    <Button primary className={cx('btn')}>
+                    <Button primary className={cx('btn')} onClick={show}>
                         Follow
                     </Button>
                 </div>

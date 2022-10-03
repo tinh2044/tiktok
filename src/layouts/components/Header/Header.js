@@ -28,7 +28,7 @@ import { Modal } from '~/Context/ModalContext';
 import { Login } from '~/Context/LoginContext';
 const cx = classNames.bind(styles);
 
-const MENU_ITEMS = [
+const MenuDefault = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
@@ -72,13 +72,11 @@ const userMenu = [
         title: 'Get Coins',
         to: '/coin',
     },
-    ...MENU_ITEMS,
+    ...MenuDefault,
     {
         icon: <FontAwesomeIcon icon={faSignOut} />,
         title: 'Log out',
-        onChange: () => {
-            console.log('Log out');
-        },
+        onChange: (func = () => {}) => func(),
         separate: true,
     },
 ];
@@ -125,7 +123,7 @@ function Header() {
                             </Button>
                         </>
                     )}
-                    <Menu items={isLogin ? userMenu : MENU_ITEMS} isLogin={isLogin}>
+                    <Menu items={isLogin ? userMenu : MenuDefault} isLogin={isLogin}>
                         {isLogin ? (
                             <Image
                                 className={cx('user-avatar')}

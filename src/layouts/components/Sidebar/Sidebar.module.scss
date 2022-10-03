@@ -4,7 +4,7 @@
     padding: 20px 0px 26px 8px;
     margin-left: -18px;
     max-height: 95vh;
-    overflow-y: auto;
+    overflow-y: overlay;
     position: fixed;
 
     &::-webkit-scrollbar {
@@ -24,12 +24,12 @@
 .login {
     padding: 24px 0;
     border-top: 1px solid rgba(204, 204, 204, 0.5);
-    width: 320px;
+    width: 90%;
 }
 
 .header {
     color: #16182380;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 22px;
     white-space: normal;
     overflow: initial;
@@ -52,7 +52,7 @@
 
 .item {
     display: inline-flex;
-    max-width: 300px;
+    max-width: 85%;
     align-items: center;
     background-color: #fff;
     border-radius: 100px;
@@ -76,30 +76,4 @@
         background: #16182308;
     }
 
-}
-
-// Footer 
-
-.footer {
-    width: 95%;
-    margin-left: 8px;
-    border-top: 1px solid rgba(204, 204, 204, 0.5);
-    padding: 24px 0;
-
-    & p,
-    & .link {
-        color: #16182380;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 17px;
-        display: inline-block;
-        margin-right: 6px;
-        margin-top: 5px;
-
-
-    }
-}
-
-.link:hover {
-    text-decoration: underline;
 }

@@ -1,0 +1,23 @@
+.footer {
+    width: 95%;
+    margin-left: 8px;
+    border-top: 1px solid rgba(204, 204, 204, 0.5);
+    padding: 24px 0;
+
+    & p,
+    & .link {
+        color: #16182380;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        display: inline-block;
+        margin-right: 6px;
+        margin-top: 5px;
+
+
+    }
+}
+
+.link:hover {
+    text-decoration: underline;
+}

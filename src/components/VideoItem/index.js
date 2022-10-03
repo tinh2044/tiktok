@@ -25,7 +25,7 @@ import Image from '~/components/Image';
 import Button from '~/layouts/Button';
 import Hashtag from '../Hashtag';
 import styles from './VideoItem.module.scss';
-import AccountPreview from '~/components/SuggestedAccount/AccuontPreview';
+import AccountPreview from '~/components/AccuontPreview';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { Vol } from '~/Context/VolContext';
 import { Play } from '~/Context/PlayContext';

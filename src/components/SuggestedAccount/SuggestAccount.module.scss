@@ -54,10 +54,11 @@
     color: #161823bf;
 }
 
-.more {
+.more,
+.less {
     font-size: 1.4rem;
-    color: var(--pr-cl);
-    font-weight: 600;
-    padding: 8px;
-    cursor: pointer;
+ color: var(--pr-cl);
+ font-weight: 600;
+ padding: 8px;
+ cursor: pointer;
 }
