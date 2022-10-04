@@ -1,4 +1,10 @@
 .wrapper {
+    padding: 20px 0px 26px 8px;
+    // margin-left: 12px;
+
+}
+
+.sidebar {
     width: 356px;
     min-height: 100px;
     padding: 20px 0px 26px 8px;
@@ -14,7 +20,7 @@
 
 }
 
-.wrapper:hover {
+.sidebar:hover {
 
     &::-webkit-scrollbar {
         display: block;
