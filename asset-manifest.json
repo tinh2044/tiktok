@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.c86cc254.css",
-    "main.js": "./static/js/main.d79d17bd.js",
+    "main.css": "./static/css/main.e86aa846.css",
+    "main.js": "./static/js/main.fcbedd21.js",
     "static/js/787.fe00223f.chunk.js": "./static/js/787.fe00223f.chunk.js",
     "static/media/item_4.mp4": "./static/media/item_4.029b1dfddc88907fd46f.mp4",
-    "static/media/item_3.mp4": "./static/media/item_3.4a658d7758743fb5976f.mp4",
-    "static/media/item_7.mp4": "./static/media/item_7.f718e997ebde48a67db7.mp4",
-    "static/media/item_6.mp4": "./static/media/item_6.bbef529a4712ee445b16.mp4",
-    "static/media/item_2.mp4": "./static/media/item_2.577c06def1a8ed893812.mp4",
-    "static/media/item_10.mp4": "./static/media/item_10.2019b94f0f05364d249f.mp4",
-    "static/media/item_5.mp4": "./static/media/item_5.fac9baaa903181029730.mp4",
-    "static/media/item_8.mp4": "./static/media/item_8.71098856d1e9c71f0436.mp4",
+    "static/media/item_3.mp4": "./static/media/item_3.a97a893792478ed5b6c8.mp4",
+    "static/media/item_7.mp4": "./static/media/item_7.500842393f250df2d43e.mp4",
+    "static/media/item_6.mp4": "./static/media/item_6.f2cb20ec7d88f4b74703.mp4",
     "static/media/item_9.mp4": "./static/media/item_9.426eef44806c2afafcd3.mp4",
-    "static/media/guide.gif": "./static/media/guide.b6d3cc69d3525571aef0.gif",
+    "static/media/item_8.mp4": "./static/media/item_8.71098856d1e9c71f0436.mp4",
+    "static/media/item_2.mp4": "./static/media/item_2.fc80ba99ed280f021fff.mp4",
+    "static/media/item_10.mp4": "./static/media/item_10.3d044518c689eb126f93.mp4",
+    "static/media/item_5.mp4": "./static/media/item_5.5e6fdaa5a4265ee5bed0.mp4",
+    "static/media/item_11.mp4": "./static/media/item_11.e424c97ce2f21cb50749.mp4",
     "static/media/item_1.mp4": "./static/media/item_1.7cb64db1200fc5a93a95.mp4",
+    "static/media/guide.gif": "./static/media/guide.b6d3cc69d3525571aef0.gif",
     "static/media/sofiapro-semibold.otf": "./static/media/sofiapro-semibold.a9a8148f7d5d0db20db8.otf",
     "static/media/qr_download.png": "./static/media/qr_download.47624c235266dedd8e4d.png",
     "static/media/microsoft.png": "./static/media/microsoft.f1596f39e85631c052c4.png",
@@ -22,12 +23,12 @@
     "static/media/Proxima-Nova-Semibold.woff2": "./static/media/Proxima-Nova-Semibold.c5632e80f6e35c93156f.woff2",
     "static/media/logo.svg": "./static/media/logo.16e736f33ea87b08c432a21c26d02e2b.svg",
     "index.html": "./index.html",
-    "main.c86cc254.css.map": "./static/css/main.c86cc254.css.map",
-    "main.d79d17bd.js.map": "./static/js/main.d79d17bd.js.map",
+    "main.e86aa846.css.map": "./static/css/main.e86aa846.css.map",
+    "main.fcbedd21.js.map": "./static/js/main.fcbedd21.js.map",
     "787.fe00223f.chunk.js.map": "./static/js/787.fe00223f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c86cc254.css",
-    "static/js/main.d79d17bd.js"
+    "static/css/main.e86aa846.css",
+    "static/js/main.fcbedd21.js"
   ]
 }
