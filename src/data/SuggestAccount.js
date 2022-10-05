@@ -31,7 +31,7 @@ export const SuggestAccount = [
     {
         name: 'Anh Bảo Vệ ✅',
         nickname: 'user4820681587935',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/2f601ddc70c454011702a81304d7e5a3~c5_100x100.jpeg?x-expires=1664114400&x-signature=hGYlbvj95rqKLDGDwhb70FGPPuE%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_11_23820_700.jpg',
         tick: false,
         follow: '2k',
         totalLike: '7.4k',
@@ -40,7 +40,7 @@ export const SuggestAccount = [
     {
         name: 'ASMR MUKBANG',
         nickname: 'asmrmukbang92',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1b96ecd62ffecbb2d07b860632dc114e~c5_100x100.jpeg?x-expires=1664114400&x-signature=FHRgf%2BwZ6%2FzVeGNX0JfSLH6CzNQ%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_12_23820_700.jpg',
         tick: false,
         follow: '5k',
         totalLike: '9k',
@@ -49,7 +49,7 @@ export const SuggestAccount = [
     {
         name: 'vanquocty2002',
         nickname: 'vanquocty2002',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/228a8257264fd9fad8caf4cde7bd3f88~c5_100x100.jpeg?x-expires=1664114400&x-signature=VHro0zHUuqeCsr%2BTKI9GcSeOuA8%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_13_23820_700.jpg',
         tick: true,
         follow: '1M',
         totalLike: '2.4m',
@@ -58,7 +58,7 @@ export const SuggestAccount = [
     {
         name: 'Cá Cảnh Hoàng Anh',
         nickname: 'cacanh.hoanganh',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c5ef725af555094c12305d53a601cb99~c5_100x100.jpeg?x-expires=1664114400&x-signature=EcC1V8qY81d9Ddw86S6rCR7h%2Bo8%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_16_23820_700.jpg',
         tick: false,
         follow: '74.4k',
         totalLike: '2.4m',
@@ -67,7 +67,7 @@ export const SuggestAccount = [
     {
         name: 'Kiệt Ắk Wỷ',
         nickname: 'kiet.ac.quy',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/708653b536650c8afe2123c824a76d07~c5_100x100.jpeg?x-expires=1664114400&x-signature=zyACIlj9v%2F3ZG5a19ZbGurmC3Bo%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_18_23820_700.jpg',
         tick: true,
         follow: '3.4m',
         totalLike: '1006.6m',
@@ -76,7 +76,7 @@ export const SuggestAccount = [
     {
         name: 'tượng diệt vinacon 🗿',
         nickname: 'tuong_diet_vinacon_',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/af21647cbde64912ccc31b73354d0f43~c5_100x100.jpeg?x-expires=1664114400&x-signature=b4sEO3xjX6PZgvkcaydFl4Cg9AE%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_20_23820_700.jpg',
         tick: true,
         follow: '100k',
         totalLike: '394k',
@@ -94,7 +94,7 @@ export const SuggestAccount = [
     {
         name: 'Phuoc Hai ✈️',
         nickname: 'phaai._',
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/38429d0dd7431c5036b1219994a9621f~c5_100x100.jpeg?x-expires=1664114400&x-signature=TBwi0Pxo5pOv1PTP5hVUeBlmQek%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_23_23820_700.jpg',
         tick: false,
         follow: '43k',
         totalLike: '126k',

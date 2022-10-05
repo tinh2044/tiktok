@@ -21,6 +21,11 @@ function DefaultLayout({ children }) {
                 </div>
             </div>
             <DownloadApp />
+            <div className={cx('loading')}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     );
 }

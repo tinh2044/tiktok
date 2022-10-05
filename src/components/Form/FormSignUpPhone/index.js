@@ -1,4 +1,4 @@
-import { faCheck, faChevronDown, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classNames from 'classnames/bind';

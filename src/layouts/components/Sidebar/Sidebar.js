@@ -64,6 +64,7 @@ function Sidebar() {
                     </div>
                 )}
                 {!styleLive ? <SuggestAccount label="Suggest Account" /> : <SuggestLive />}
+                {isLogin && !styleLive && <SuggestAccount label="Following Account" />}
 
                 <div className={cx('hashtag')}>
                     <p className={cx('title')}>Discover</p>

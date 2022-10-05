@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
-import { createElement, useRef } from 'react';
+import { useRef } from 'react';
 import { useState } from 'react';
-import { createRoot } from 'react-dom/client';
 import { UploadSolidIcon, WarningIcon } from '~/components/icons';
 import AllowUserTo from './components/AllowUserTo';
 import ChooseWatcher from './components/ChooseWatcher';

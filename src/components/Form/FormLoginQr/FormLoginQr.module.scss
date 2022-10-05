@@ -14,7 +14,7 @@
     color: #161823;
     font-family: 'SofiaPro';
     font-size: 32px;
-     
+
     margin-bottom: 24px;
     font-weight: bold;
     text-align: center;
@@ -45,6 +45,13 @@
     margin-bottom: 4px;
     overflow: initial;
     white-space: normal;
+
+    span {
+        vertical-align: middle;
+        margin-left: 4px;
+
+    }
+
 }
 
 .guide {

@@ -50,7 +50,6 @@ function Live() {
                 newRecommendLive.push(recommendLive[index]);
             }
         }
-        handleLive(item);
         setRecommendLive(newRecommendLive);
     };
 
@@ -93,6 +92,7 @@ function Live() {
                             className={cx('item', { active: index === 0 })}
                             onClick={() => {
                                 handleLive(item);
+                                handleRecommendLive();
                             }}
                         >
                             <video className={cx('video')} src={item.video} />
@@ -104,7 +104,14 @@ function Live() {
             <div className={cx('recommend')}>
                 <h2 className={cx('heading')}>Recommend LIVE Videos</h2>
                 {recommendLive.map((item, index) => (
-                    <LiveItem key={index} data={item} onClick={handleRecommendLive} />
+                    <LiveItem
+                        key={index}
+                        data={item}
+                        onClick={() => {
+                            handleRecommendLive();
+                            handleLive(item);
+                        }}
+                    />
                 ))}
             </div>
         </div>

@@ -12,7 +12,7 @@ import video_11 from '~/assets/Video/VideoLive/item_11.mp4';
 
 const SuggestAccountLive = [
     {
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/00ea541805c5a7e04239ad5025549dbe~c5_100x100.jpeg?x-expires=1664931600&x-signature=80cFQAiNbqis78Bh%2BrmzAubm05A%3D',
+        avatar: 'https://tophinhanh.com/wp-content/uploads/2021/12/hinh-avatar-ngau-cho-con-trai.jpg',
         name: 'kaitokid_kid✅',
         nickname: 'kaitokid_kid',
         watcher: '3',

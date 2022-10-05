@@ -8,7 +8,7 @@ import video_7 from '~/assets/Video/VideoHome/item_7.mp4';
 export const SuggestVideo = [
     {
         video: video_1,
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/2b6017d268dc47b9689ec58ea3c6953c~c5_100x100.jpeg?x-expires=1664110800&x-signature=zo1lL2kK3HTpVVCo9qKE8ek3X5g%3D',
+        avatar: 'https://scr.vn/wp-content/uploads/2020/07/V%E1%BA%A1n-l%C3%BD-tr%C6%B0%E1%BB%9Dng-th%C3%A0nh-annhr-4k-s%E1%BA%AFc-n%C3%A9t-scaled-1536x864.jpg',
         name: 'depmoingay',
         nickname: 'depmoingay123',
         hashtag: ['gaixinhtiktok', 'xuhuong', 'codauxinh'],
@@ -24,7 +24,7 @@ export const SuggestVideo = [
     },
     {
         video: video_2,
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/a143972dfa2ca7563f01f50e381ded00~c5_100x100.jpeg?x-expires=1664110800&x-signature=HVffjeBa%2BnKl3Rdw8ONzYlFddsM%3D',
+        avatar: 'https://bangxephang.com/wp-content/uploads/2021/03/anh-dai-dien-anime-dep_104204759.jpg',
         name: 'Đỗ Văn Quyến',
         nickname: 'quyen2201',
         hashtag: ['Fiter', 'IT', 'lgbt'],
@@ -40,7 +40,7 @@ export const SuggestVideo = [
     },
     {
         video: video_3,
-        avatar: 'https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/22769d504f6fab8f54048d37565eaef1.jpeg?x-expires=1664110800&x-signature=N%2FIWVsCrgMdZnrfRDG8niy6sNhQ%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_2_23820_700.jpg',
         name: 'Firelop.com',
         nickname: 'firelop.com',
         hashtag: [
@@ -71,7 +71,7 @@ export const SuggestVideo = [
     },
     {
         video: video_4,
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1e2f00fc46a24efef4245d6734fe20dd~c5_100x100.jpeg?x-expires=1664110800&x-signature=JI76nOlGYeKPE%2FBjDCBL%2B5oT9Hc%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_4_23820_700.jpg',
         name: '𝐕𝐢𝐞̣̂𝐭 𝐌𝐲̃ ✏️',
         nickname: 'vietmyusa',
         hashtag: ['vietmyusa'],
@@ -87,7 +87,7 @@ export const SuggestVideo = [
     },
     {
         video: video_5,
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/d704ce792b3096bf16ee39b3c9357e92~c5_100x100.jpeg?x-expires=1664110800&x-signature=ah%2BpPJjqbBOtBznZJD079BKc7Fs%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_5_23820_700.jpg',
         name: 'Hân Bê Đê 🕺🏻🥀🌸🏳️‍🌈',
         nickname: 'im.hanious',
         hashtag: ['hello', 'trend'],
@@ -103,7 +103,7 @@ export const SuggestVideo = [
     },
     {
         video: video_6,
-        avatar: 'https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1664110800&x-signature=8h1UAvPwFTrl%2FC0AcBg2BQAjPnM%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_7_23820_700.jpg',
         name: 'Theanh28 Entertainment',
         nickname: 'theanh28entertainment',
         hashtag: ['theanh28news', 'tiktoknews', 'onhaxemtin', 'theanh28'],
@@ -118,9 +118,9 @@ export const SuggestVideo = [
         id: 6,
     },
     {
-        video: video_7,
-        avatar: 'https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/9d808d6d8bff318080d90efd90cdb678.jpeg?x-expires=1664110800&x-signature=kpmqA9VFo2%2BkET9kkaAqyWsjzGU%3D',
+        avatar: 'https://pgdngochoi.edu.vn/anh-dep-lam-avatar-facebook/imager_8_23820_700.jpg',
         name: 'Đình Khánh',
+        video: video_7,
         nickname: 'todinhkhanhTô ',
         hashtag: ['todinhkhanh', 'nghilucsong', 'tody'],
         content: 'Chiếc xe hoa có 102',
