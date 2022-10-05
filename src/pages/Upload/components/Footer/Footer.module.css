@@ -22,11 +22,17 @@
   top: 43px;
 }
 
+.content {
+  display: flex;
+}
+
 .item {
   flex: 1 1 0%;
   max-width: 226px;
   padding-right: 8px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -38,11 +44,20 @@
 }
 
 .link {
-  display: block;
+  display: inline;
+  width: max-content;
   text-align: left;
   text-decoration: none;
   font-family: var(--font-family);
+  font-size: 1.4rem;
+  font-weight: 100;
   color: #CCCCBF;
+  padding-bottom: 1px;
+  border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+  border-bottom: 2px solid #ccc;
 }
 
 .bottom {

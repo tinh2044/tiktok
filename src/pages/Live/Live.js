@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { UserGroupIcon } from '~/components/icons';
 import Image from '~/components/Image';
@@ -12,42 +13,47 @@ function Live() {
     const [suggestLive, setSuggestLive] = useState(SuggestAccountLive.slice(0, 4));
     const [recommendLive, setRecommendLive] = useState(SuggestAccountLive);
 
+    const liveRef = useRef();
+
+    useEffect(() => {
+        if (liveRef !== null) {
+            liveRef.current.play();
+        }
+    }, [suggestLive]);
+
     const handleLive = (item) => {
         const newSuggestLive = [];
         newSuggestLive.push(item);
         const len = SuggestAccountLive.length;
         while (newSuggestLive.length < 4) {
-            let check = false;
-            while (!check) {
-                let index = Math.floor(Math.random() * len);
-                if (!suggestLive.includes(SuggestAccountLive[index])) {
-                    newSuggestLive.push(SuggestAccountLive[index]);
-                    check = true;
-                }
+            let index = Math.floor(Math.random() * len);
+            if (
+                !suggestLive.includes(SuggestAccountLive[index]) &&
+                !newSuggestLive.includes(SuggestAccountLive[index])
+            ) {
+                newSuggestLive.push(SuggestAccountLive[index]);
             }
         }
+        document.documentElement.scrollTop = 0;
         setSuggestLive(newSuggestLive);
     };
-    const handleRecommendLive = () => {
+    const handleRecommendLive = (item) => {
         let newRecommendLive = [];
         let len = recommendLive.length;
         let index;
-        do {
+        index = Math.floor(Math.random() * len);
+        newRecommendLive.push(recommendLive[index]);
+        while (newRecommendLive.length < len) {
             index = Math.floor(Math.random() * len);
-            newRecommendLive.push(recommendLive[index]);
-        } while (newRecommendLive.length < len);
-        {
-            let check = false;
-            while (!check) {
-                index = Math.floor(Math.random() * len);
-                if (!newRecommendLive.includes(recommendLive[index])) {
-                    newRecommendLive.push(recommendLive[index]);
-                    check = true;
-                }
+            if (!newRecommendLive.includes(recommendLive[index])) {
+                console.log(recommendLive[index]);
+                newRecommendLive.push(recommendLive[index]);
             }
         }
+        handleLive(item);
         setRecommendLive(newRecommendLive);
     };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('main')}>
@@ -69,7 +75,15 @@ function Live() {
                             <p>Live</p>
                         </div>
                     </header>
-                    <video className={cx('live')} src={suggestLive[0].video} />
+                    <video
+                        className={cx('live')}
+                        src={suggestLive[0].video}
+                        ref={liveRef}
+                        onEnded={(e) => {
+                            e.target.currentTime = 0;
+                            e.target.play();
+                        }}
+                    />
                     <button className={cx('btn-watch')}>WATCH</button>
                 </div>
                 <div className={cx('suggest')}>
@@ -89,7 +103,9 @@ function Live() {
             </div>
             <div className={cx('recommend')}>
                 <h2 className={cx('heading')}>Recommend LIVE Videos</h2>
-                <LiveItem data={recommendLive} onClick={handleRecommendLive} />
+                {recommendLive.map((item, index) => (
+                    <LiveItem key={index} data={item} onClick={handleRecommendLive} />
+                ))}
             </div>
         </div>
     );

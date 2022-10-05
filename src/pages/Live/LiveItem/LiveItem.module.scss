@@ -1,11 +1,5 @@
-.wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
 .item {
+    display: inline-block;
     margin: 8px;
     width: 315px;
 
@@ -59,7 +53,7 @@
 .video {
     width: 200px;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .status {
