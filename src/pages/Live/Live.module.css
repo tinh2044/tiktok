@@ -126,7 +126,12 @@
   border-radius: 4px;
   background-color: rgba(22, 24, 35, 0.7);
   overflow: hidden;
+  margin-bottom: 12px;
   position: relative;
+}
+
+.active {
+  border: 1px solid var(--pr-cl);
 }
 
 .video {

@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: var(--white);
+  border-radius: 9px;
+  width: 310px;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #161823;
+  word-break: break-word;
+  text-align: center;
+}

@@ -133,10 +133,14 @@
     background-color: rgba(22, 24, 35, 0.7);
 
     overflow: hidden;
-    // margin: 12px 0;
+    margin-bottom: 12px;
     position: relative;
 
 
+}
+
+.active {
+    border: 1px solid var(--pr-cl);
 }
 
 .video {

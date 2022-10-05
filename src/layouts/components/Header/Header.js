@@ -97,9 +97,9 @@ function Header() {
                     {isLogin ? (
                         <>
                             <Tippy delay={[0, 50]} content="Upload">
-                                <button className={cx('action-btn')}>
+                                <Link to={config.routes.upload} className={cx('action-btn')}>
                                     <UploadIcon />
-                                </button>
+                                </Link>
                             </Tippy>
                             <Tippy delay={[0, 50]} content="Message">
                                 <button className={cx('action-btn')}>
