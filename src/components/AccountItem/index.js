@@ -13,11 +13,8 @@ function AccountItem({ data }) {
         <Link to={`/`} className={cx('wrapper')}>
             <Image className={cx('avatar')} src={data.avatar} alt={data.last_name} />
             <div className={cx('info')}>
-                <h4 className={cx('name')}>
-                    <span>{data.full_name}</span>
-
-                    {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
-                </h4>
+                <span>{data.full_name}</span>
+                <h4>{data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}</h4>
                 <span className={cx('userName')}>{data.nickname}</span>
             </div>
         </Link>
