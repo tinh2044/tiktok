@@ -4,12 +4,23 @@ import classNames from 'classnames/bind';
 import { SuggestAccount as dataSuggestAccount } from '~/data/SuggestAccount';
 import styles from './SuggestAccount.module.scss';
 import AccountItem from './AccountItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getAccount } from '~/services/getSuggestAccount';
 const cx = classNames.bind(styles);
 
 function SuggestAccount({ label }) {
-    const [data, setData] = useState(dataSuggestAccount.slice(0, 3));
+    const [data, setData] = useState([]);
+
     const [isMore, setIsMore] = useState(false);
+    const getData = async (perPage) => {
+        const data = await getAccount(1, perPage);
+
+        setData(data);
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
@@ -20,7 +31,7 @@ function SuggestAccount({ label }) {
                 <p
                     className={cx('more')}
                     onClick={() => {
-                        setData(dataSuggestAccount.slice(0, 3));
+                        getData(12);
                         setIsMore(false);
                     }}
                 >
@@ -30,7 +41,7 @@ function SuggestAccount({ label }) {
                 <p
                     className={cx('more')}
                     onClick={() => {
-                        setData(dataSuggestAccount);
+                        getData(5);
                         setIsMore(true);
                     }}
                 >

@@ -1,11 +1,11 @@
 import * as request from '~/untils/request';
 
-export const searchApi = async (q, type = 'less') => {
+export const getAccount = async (page = 1, perPage = 5) => {
     try {
-        const res = await request.get('users/search', {
+        const res = await request.get('users/suggested', {
             params: {
-                q,
-                type,
+                page,
+                per_page: perPage,
             },
         });
         return res.data;

@@ -1,10 +1,10 @@
 import * as request from '~/untils/request';
 
-export const searchApi = async (q, type = 'less') => {
+export const VideoApi = async (page = 1, type = 'for-you') => {
     try {
-        const res = await request.get('users/search', {
+        const res = await request.get('videos', {
             params: {
-                q,
+                page,
                 type,
             },
         });

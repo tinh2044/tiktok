@@ -32,6 +32,7 @@ import { Play } from '~/Context/PlayContext';
 import Share from '~/components/Share';
 import { Modal } from '~/Context/ModalContext';
 import { Login } from '~/Context/LoginContext';
+import { useLayoutEffect } from 'react';
 const cx = classNames.bind(styles);
 const ListShare = [
     {
@@ -82,12 +83,26 @@ const ListShare = [
 ];
 
 function VideoItem({ data }) {
+    const { user } = data;
     const { playVideo, setPlayVideo } = useContext(Play);
     const { volume, setVolume } = useContext(Vol);
     const videoRef = useRef(null);
     const [isPlay, setIstPlay] = useState(false);
     const { show } = useContext(Modal);
     const { isLogin } = useContext(Login);
+    const [content, setContent] = useState('');
+    const [listHashtag, setListHashTag] = useState([]);
+    // Handle Content
+    const handleContent = () => {
+        let desc = data.description;
+        if (desc.includes('#')) {
+            setListHashTag(desc.split('#').slice(1));
+            setContent(desc.substring(0, desc.indexOf('#')));
+        } else setContent(desc);
+    };
+    useLayoutEffect(() => {
+        handleContent();
+    }, []);
     useMemo(() => {
         if (playVideo && videoRef.current !== null) {
             if (playVideo === data.id) {
@@ -124,7 +139,7 @@ function VideoItem({ data }) {
         return (
             <div tabIndex="-1" {...props}>
                 <PopperWrapper>
-                    <AccountPreview data={data} />
+                    <AccountPreview data={user} />
                 </PopperWrapper>
             </div>
         );
@@ -150,17 +165,17 @@ function VideoItem({ data }) {
                         placement="bottom-start"
                         offset={[-18, -4]}
                     >
-                        <Image className={cx('avatar')} src={data.avatar} alt="" size="54px" />
+                        <Image className={cx('avatar')} src={user.avatar} alt="" size="54px" />
                     </Tippy>
                     <div className={cx('content')}>
                         <Link to="/" className={cx('info')}>
-                            <strong className={cx('nickname')}>{data.nickname}</strong>
-                            {data.tick && <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />}
-                            <p className={cx('name')}>{data.name}</p>
+                            <strong className={cx('nickname')}>{user.nickname}</strong>
+                            {user.tick && <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />}
+                            <p className={cx('name')}>{user.first_name + user.last_name}</p>
                         </Link>
                         <p className={cx('text')}>
-                            {data.content}
-                            {data.hashtag.map((item, index) => (
+                            {content}
+                            {listHashtag.map((item, index) => (
                                 <Hashtag key={index} className={cx('hashtag')}>
                                     {item}
                                 </Hashtag>
@@ -187,7 +202,7 @@ function VideoItem({ data }) {
                         onClick={handlePlayOrPause}
                         ref={videoRef}
                         className={cx('video')}
-                        src={data.video}
+                        src={data.file_url}
                         onEnded={(e) => {
                             e.target.currentTime = 0;
                             e.target.play();
@@ -215,17 +230,17 @@ function VideoItem({ data }) {
                     <button className={cx('heart')}>
                         <FontAwesomeIcon icon={faHeart} />
                     </button>
-                    <p className={cx('quantity')}>{data.like.toUpperCase()}</p>
+                    <p className={cx('quantity')}>{data.likes_count}</p>
                     <button className={cx('comment')}>
                         <FontAwesomeIcon icon={faCommentDots} />
                     </button>
-                    <p className={cx('quantity')}>917</p>
+                    <p className={cx('quantity')}>{data.comments_count}</p>
                     <Tippy interactive render={renderShare} placement="top-start" offset={[-20, 4]} delay={[0, 400]}>
                         <button className={cx('share')}>
                             <FontAwesomeIcon icon={faShare} />
                         </button>
                     </Tippy>
-                    <p className={cx('quantity')}>324</p>
+                    <p className={cx('quantity')}>{data.shares_count}</p>
                 </div>
             </div>
         </div>

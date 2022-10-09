@@ -9,17 +9,15 @@ import ModalDownloadContext from './Context/ModalDownloadContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <React.StrictMode>
-        <GlobalStyle>
-            <ModalContext>
-                <LoginContext>
-                    <ModalDownloadContext>
-                        <App />
-                    </ModalDownloadContext>
-                </LoginContext>
-            </ModalContext>
-        </GlobalStyle>
-    </React.StrictMode>,
+    <GlobalStyle>
+        <ModalContext>
+            <LoginContext>
+                <ModalDownloadContext>
+                    <App />
+                </ModalDownloadContext>
+            </LoginContext>
+        </ModalContext>
+    </GlobalStyle>,
 );
 
 // If you want to start measuring performance in your app, pass a function

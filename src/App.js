@@ -10,7 +10,6 @@ import { FormDownload } from './components/Form';
 function App() {
     const { showModal } = useContext(Modal);
     const { showModalDownload } = useContext(ModalDownload);
-
     return (
         <Router>
             <div className="App">

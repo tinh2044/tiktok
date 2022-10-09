@@ -7,6 +7,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import PlayContext from '~/Context/PlayContext';
 import VolContext from '~/Context/VolContext';
 import DownloadApp from '../../components/DownloadApp';
+import { memo } from 'react';
 const cx = className.bind(styles);
 function DefaultLayout({ children }) {
     return (
@@ -32,4 +33,4 @@ function DefaultLayout({ children }) {
 DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
 };
-export default DefaultLayout;
+export default memo(DefaultLayout);

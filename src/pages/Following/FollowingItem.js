@@ -12,6 +12,7 @@ import { Modal } from '~/Context/ModalContext';
 
 const cx = classNames.bind(styles);
 function FollowingItem({ data }) {
+    const { user } = data;
     const { show } = useContext(Modal);
     const { volume } = useContext(Vol);
     const videoRef = useRef();
@@ -28,7 +29,7 @@ function FollowingItem({ data }) {
             >
                 <video
                     className={cx('video')}
-                    src={data.video}
+                    src={data.popular_video.file_url}
                     onTimeUpdate={(e) => {
                         e.target.volume = volume;
                     }}
@@ -36,7 +37,7 @@ function FollowingItem({ data }) {
                 />
                 <div className={cx('desc')}>
                     <Image src={data.avatar} className={cx('avatar')} size={'48px'} />
-                    <h5 className={cx('name')}>{data.name}</h5>
+                    <h5 className={cx('name')}>{data.first_name + data.last_name}</h5>
                     <h6 className={cx('nickname')}>
                         {data.nickname}
                         {data.tick && (
