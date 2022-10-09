@@ -20,7 +20,7 @@ function Upload() {
     const bodyRef = useRef();
     const handleInput = (e) => {
         const value = e.target.value;
-        if (value.length >= 4) {
+        if (value.length >= 150) {
             console.dir(bodyRef.appendChild);
             setInputValue((prev) => prev);
         } else {
@@ -56,11 +56,14 @@ function Upload() {
                         <div className={cx('caption')}>
                             <div className={cx('desc')}>
                                 <p className={cx('title')}>Caption</p>
-                                <span className={cx('count')}>{inputValue.length || 0}/4</span>
+                                <span className={cx('count')}>{inputValue.length || 0}/150</span>
                             </div>
                             <div className={cx('input')}>
                                 <input type="text" value={inputValue} onChange={handleInput} />
                             </div>
+                            {inputValue.length >= 150 && (
+                                <p className={cx('notification')}>Maximum is 150 characters</p>
+                            )}
                         </div>
 
                         <div className={cx('cover')}>
