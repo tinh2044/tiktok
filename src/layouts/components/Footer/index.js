@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import { dataFooter } from '~/data/Footer';
+import { dataFooter } from '~/data/footer';
 import styles from './Footer.module.scss';
 
 const cx = classNames.bind(styles);

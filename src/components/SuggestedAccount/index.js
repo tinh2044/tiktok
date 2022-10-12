@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import { SuggestAccount as dataSuggestAccount } from '~/data/SuggestAccount';
 import styles from './SuggestAccount.module.scss';
 import AccountItem from './AccountItem';
 import { useEffect, useState } from 'react';

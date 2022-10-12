@@ -15,7 +15,7 @@ import Menu from './Menu';
 import MenuItem from './Menu/MenuItem';
 import styles from './Sidebar.module.scss';
 import SuggestAccount from '~/components/SuggestedAccount';
-import { SuggestHashtag } from '~/data/SuggestHashtag';
+import { suggestHashtag } from '~/data/suggestHashtag';
 import Hashtag from '~/components/Hashtag';
 import Button from '~/layouts/Button';
 import { Modal } from '~/Context/ModalContext';
@@ -68,7 +68,7 @@ function Sidebar() {
 
                 <div className={cx('hashtag')}>
                     <p className={cx('title')}>Discover</p>
-                    {SuggestHashtag.map((item, index) => (
+                    {suggestHashtag.map((item, index) => (
                         <Hashtag key={index} data={item} className={cx('item')} />
                     ))}
                 </div>

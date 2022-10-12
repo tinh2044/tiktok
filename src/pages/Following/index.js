@@ -1,8 +1,5 @@
 import classNames from 'classnames/bind';
-import VideoItem from '~/components/VideoItem';
 import styles from './Following.module.scss';
-import { SuggestVideo as dataVideo } from '~/data/SuggestVideo';
-import { SuggestAccount } from '~/data/SuggestAccount';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { Login } from '~/Context/LoginContext';
 import { Fragment } from 'react';

@@ -1,4 +1,4 @@
-export const SuggestHashtag = [
+export const suggestHashtag = [
     {
         title: 'suthatla',
     },
