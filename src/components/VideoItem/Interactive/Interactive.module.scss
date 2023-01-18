@@ -1,0 +1,26 @@
+.place-interactive {
+
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart,
+.comment,
+.share {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: rgb(22, 24, 35, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0;
+
+}
+
+.quantity {
+    color: #161823bf;
+}

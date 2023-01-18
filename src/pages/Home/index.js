@@ -12,7 +12,6 @@ function HomePage() {
     const getVideo = async (type = 'for-you') => {
         window.removeEventListener('scroll', handleLoadVideo);
         const data = await VideoApi(count, type);
-        console.log(count);
 
         setData((prev) => {
             return [...prev, ...data];
@@ -27,11 +26,14 @@ function HomePage() {
         return window.removeEventListener('scroll', handleLoadVideo);
     }, [count]);
     const handleLoadVideo = () => {
-        let height = homeRef.current.scrollHeight;
+
+
+        let height = homeRef.current.scrollHeight || 1;
         if (height > 0 && document.documentElement.scrollTop > height - 900) {
             setCount(count + 1);
         }
     };
+
 
     return (
         <div className={cx('home')} ref={homeRef}>

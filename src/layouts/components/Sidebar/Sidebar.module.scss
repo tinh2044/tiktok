@@ -13,8 +13,8 @@
     overflow-y: overlay;
     position: fixed;
 
-    &::-webkit-scrollbar {
-        display: none;
+    &::-webkit-scrollbar-track {
+        background: transparent;
     }
 
 

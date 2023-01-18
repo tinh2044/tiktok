@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.desc {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 80%;
+}
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 12px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.nickname {
+    font-size: 1.8rem;
+    line-height: 1;
+
+
+}
+
+.icon {
+    margin-left: 4px;
+    color: #20d5ec;
+}
+
+.name {
+    font-size: 1.3rem;
+    line-height: 1;
+    margin-left: 4px;
+}
+
+.text {
+    margin-top: 4px;
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: initial;
+    white-space: normal;
+}
+
+.hashtag {
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.music {
+    margin-top: 4px;
+    display: flex;
+    color: rgb(22, 24, 35);
+    align-items: center;
+    font-weight: 700;
+}
+
+.icon-music {
+    margin-right: 8px;
+}
+
+.music,
+.hashtag,
+.nickname {
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
